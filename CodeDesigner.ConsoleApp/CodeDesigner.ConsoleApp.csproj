@@ -65,22 +65,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CodeDesigner.Library\CodeDesigner.Library.csproj">
-      <Project>{7dc47c63-8d67-4414-aa06-ba5b63d1afa2}</Project>
-      <Name>CodeDesigner.Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CodeDesigner.Languages\CodeDesigner.Languages.csproj">
-      <Project>{dff996bd-b9ad-48fa-9445-195812528ef2}</Project>
-      <Name>CodeDesigner.Languages</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\cheats.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\WelcomeText.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeDesigner.Languages\CodeDesigner.Languages.csproj">
+      <Project>{dff996bd-b9ad-48fa-9445-195812528ef2}</Project>
+      <Name>CodeDesigner.Languages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeDesigner.Library\CodeDesigner.Library.csproj">
+      <Project>{7dc47c63-8d67-4414-aa06-ba5b63d1afa2}</Project>
+      <Name>CodeDesigner.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

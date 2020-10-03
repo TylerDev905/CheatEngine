@@ -1,0 +1,36 @@
+﻿<Window x:Class="CodeDesigner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeDesigner"
+        mc:Ignorable="d"
+        Title="Code Designer" Height="450" Width="800">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="File" CanExecute="" />
+        <CommandBinding Command="Search" CanExecute="" />
+        <CommandBinding Command="Debug" CanExecute="" />
+        <CommandBinding Command="Window" CanExecute="" />
+        <CommandBinding Command="Utilities" CanExecute="" />
+        <CommandBinding Command="Settings" CanExecute="" />
+        <CommandBinding Command="Help" CanExecute="" />
+        
+    </Window.CommandBindings>
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Command="File" Content="File" />
+                <Button Command="Search" Content="Search" />
+                <Button Command="onToolBarButtonClick" Content="Debug" />
+                <Button Command="Window" Content="Window" />
+                <Button Command="Utilities" Content="Utilities" />
+                <Button Command="Settings" Content="Settings" />
+                <Button Command="Help" Content="Help" />
+            </ToolBar>
+        </ToolBarTray>
+        <!--<DataGrid Height="392" Width="300" VerticalAlignment="Stretch" HeadersVisibility="None"/>-->
+        
+    </DockPanel>
+    
+</Window>

@@ -12,7 +12,8 @@ namespace CodeDesigner.Library.Editors
     {
         private Assembler _assembler { get; } = new Assembler();
         private Disassembler _disassembler { get; } = new Disassembler();
-        public Pcsx2Editor(string processName = "pcsx2") : base(processName = "pcsx2") { }
+        public Pcsx2Editor() : base("PCSX2dis") { }
+
         public void WriteOperation(int address, string operation)
         {
             var hexString = _disassembler.Disassemble(operation);

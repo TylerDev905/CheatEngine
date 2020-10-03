@@ -39,6 +39,42 @@ namespace CodeDesigner.Library.Editors
         {
             Write((int)address, data);
         }
+        public int PageLength { get; set; } = 20;
+        private int _currentAddress { get; set; } = 0x00000000;
+
+        public void NextAddress()
+        {
+            _currentAddress += 0x04;
+        }
+
+        public void LastAddress()
+        {
+            _currentAddress -= 0x04;
+        }
+
+        public Dictionary<int, byte[]> NextPage()
+        {
+            var page = new Dictionary<int, byte[]>();
+
+            for (var i = 0; i < PageLength; i++)
+            {
+                NextAddress();
+                page.Add(_currentAddress, Read(_currentAddress, 0x4));
+            }
+            return page;
+        }
+        public Dictionary<int, byte[]> LastPage()
+        {
+            var page = new Dictionary<int, byte[]>();
+
+            for (var i = 0; i < PageLength; i++)
+            {
+                LastAddress();
+                page.Add(_currentAddress, Read(_currentAddress, 0x4));
+            }
+
+            return page;
+        }
         public byte[] SnapShot(int snapShotStartIndex, int snapShotLength)
             => _bytes.Skip(snapShotStartIndex)
             .Take(snapShotLength)

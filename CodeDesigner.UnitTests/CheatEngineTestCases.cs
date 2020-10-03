@@ -9,12 +9,12 @@ namespace CodeDesigner.UnitTests
     public class CheatEngineTestCases
     {
         public MockMemoryEditor MockMemoryEditor { get; set; }
-        public CheatEngine CheatEngine { get; set; }
+        public Library.CheatEngine CheatEngine { get; set; }
         
         public CheatEngineTestCases()
         {
             MockMemoryEditor = new MockMemoryEditor();
-            CheatEngine = new CheatEngine(MockMemoryEditor, 0x00000000);
+            CheatEngine = new Library.CheatEngine(MockMemoryEditor, 0x00000000);
         }
 
         public void IsCheatApplied(byte[] cheatBytes, byte[] appliedBytes)
