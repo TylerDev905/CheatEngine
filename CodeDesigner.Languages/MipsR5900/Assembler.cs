@@ -2,6 +2,7 @@
 using CodeDesigner.Languages.MipsR5900.BaseTypes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CodeDesigner.Languages.MipsR5900
 {
@@ -13,7 +14,7 @@ namespace CodeDesigner.Languages.MipsR5900
             var instruction = GetInstruction(binary);
 
             var bitIndex = 0;
-            var syntax = instruction.Syntax[0];
+            var syntax = instruction.Syntax.First();
              
             foreach(var instructionArg in instruction.Args)
             {
@@ -78,7 +79,9 @@ namespace CodeDesigner.Languages.MipsR5900
 
                 for(var i = 0; i < 32; i++)
                 {
-                    if(instruction.Mask[i] == '1' && instruction.Binary[i] != binaryString.Value[i])
+                    if(instruction.Mask[i] == '1' 
+                        && instruction.Binary[i] 
+                        != binaryString.Value[i])
                     {
                         isMatch = false;
                         break;

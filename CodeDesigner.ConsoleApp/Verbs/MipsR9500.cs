@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace CodeDesigner.ConsoleApp.Verbs
 {
-    [Verb("MipsR9000", HelpText = "A MipsR9000 assembler/disassembler.")]
-    public class MipsR9000
+    [Verb("MipsR9500", HelpText = "A MipsR9000 assembler/disassembler.")]
+    public class MipsR9500
     {
-        [Option('a', "Assemble", HelpText = "Assemble MIPsR9000 assembly code.")]
+        [Option('a', "Assemble", HelpText = "Assemble MIPsR9500 assembly code.")]
         public bool Assemble { get; set; }
-        [Option('d', "Disassemble", HelpText = "Disassemble a MIPsR9000 operation.")]
+        [Option('d', "Disassemble", HelpText = "Disassemble a MIPsR9500 operation.")]
         public bool Disassemble { get; set; }
         [Option('o', "Operation", HelpText = "The operation that will be Disassembled.")]
         public string Operation { get; set; }
@@ -21,17 +21,17 @@ namespace CodeDesigner.ConsoleApp.Verbs
         public string OperationHex { get; set; }
         private static Assembler _assembler { get; } = new Assembler();
         private static Disassembler _disassembler { get; } = new Disassembler();
-        public static int Run(MipsR9000 mipsR9000)
+        public static int Run(MipsR9500 mipsR9500)
         {
 
-            if (mipsR9000.Assemble)
+            if (mipsR9500.Assemble)
             {
-               Console.WriteLine(_assembler.Assemble(mipsR9000.OperationHex));
+               Console.WriteLine(_assembler.Assemble(mipsR9500.OperationHex));
             }
 
-            if (mipsR9000.Disassemble)
+            if (mipsR9500.Disassemble)
             {
-                Console.WriteLine(_disassembler.Disassemble(mipsR9000.Operation));
+                Console.WriteLine(_disassembler.Disassemble(mipsR9500.Operation));
             }
 
             return 0;

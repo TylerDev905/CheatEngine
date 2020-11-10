@@ -27,7 +27,7 @@ namespace CodeDesigner.UnitTests
         [TestMethod]
         public void MipsR9000Assemble()
         {
-            _process.StartInfo.Arguments = "MipsR9000 -a -h 24080001";
+            _process.StartInfo.Arguments = "MipsR9500 -a -h 24080001";
             _process.Start();
             var output = _process.StandardOutput.ReadLine();
             _process.Close();
@@ -36,7 +36,7 @@ namespace CodeDesigner.UnitTests
         [TestMethod]
         public void MipsR9000Disassemble()
         {
-            _process.StartInfo.Arguments = @"MipsR9000 -d -o ""addiu t0, zero, $0001""";
+            _process.StartInfo.Arguments = @"MipsR9500 -d -o ""addiu t0, zero, $0001""";
             _process.Start();
             var output = _process.StandardOutput.ReadLine();
             _process.Close();

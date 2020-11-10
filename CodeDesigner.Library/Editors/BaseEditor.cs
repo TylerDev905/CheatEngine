@@ -46,12 +46,6 @@ namespace CodeDesigner.Library.Editors
         {
             _currentAddress += 0x04;
         }
-
-        public void LastAddress()
-        {
-            _currentAddress -= 0x04;
-        }
-
         public Dictionary<int, byte[]> NextPage()
         {
             var page = new Dictionary<int, byte[]>();
@@ -62,6 +56,10 @@ namespace CodeDesigner.Library.Editors
                 page.Add(_currentAddress, Read(_currentAddress, 0x4));
             }
             return page;
+        }
+        public void LastAddress()
+        {
+            _currentAddress -= 0x04;
         }
         public Dictionary<int, byte[]> LastPage()
         {

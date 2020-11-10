@@ -58,8 +58,9 @@ namespace CodeDesigner.Languages.CDL
                 | RegexOptions.Multiline
                 | RegexOptions.Compiled;
 
-            tokens.AddRange(Regex.Matches(cdsString, Comment.SingleLineRegex, sharedRegexOptions)
-                .ToToken(m => new Comment()
+
+            var matches = Regex.Matches(cdsString, Comment.SingleLineRegex, sharedRegexOptions);
+            tokens.AddRange(matches.ToToken(m => new Comment()
                 {
                     Match = m,
                     IsSingleLine = true

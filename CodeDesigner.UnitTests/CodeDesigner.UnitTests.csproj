@@ -54,7 +54,7 @@
   <ItemGroup>
     <Compile Include="CheatEngineTestCases.cs" />
     <Compile Include="ConsoleAppTestCases.cs" />
-    <Compile Include="MipsR9000TestCases.cs" />
+    <Compile Include="MipsR5900TestCases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

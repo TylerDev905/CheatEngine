@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CodeDesigner.UnitTests
 {
     [TestClass]
-    public class MipsR9000TestCases
+    public class MipsR5900TestCases
     {
         private Assembler _assembler { get; } = new Assembler();
         private Disassembler _disassembler { get; } = new Disassembler();

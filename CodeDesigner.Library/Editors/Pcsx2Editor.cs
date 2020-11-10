@@ -34,11 +34,11 @@ namespace CodeDesigner.Library.Editors
         }
         public void OpenEmulator()
         {
-
+            throw new NotImplementedException();
         }
         public void InstallAndConfig(string version)
         {
-
+            throw new NotImplementedException();
         }
 
     }
