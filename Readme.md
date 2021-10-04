@@ -11,7 +11,7 @@ set-executionpolicy remotesigned
 ```powershell
 .\Install.ps1
 ```
-
+# Console app usage
 ﻿
 ## 1. Basic usage structure
 ```powershell
