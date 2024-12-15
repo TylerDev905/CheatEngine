@@ -1,72 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DC47C63-8D67-4414-AA06-BA5B63D1AFA2}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeDesigner.CheatEngine</RootNamespace>
-    <AssemblyName>CodeDesigner.CheatEngine</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\CodeDesigner.Languages\CodeDesigner.Languages.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Editors\BaseEditor.cs" />
-    <Compile Include="Editors\Pcsx2Editor.cs" />
-    <Compile Include="Editors\SnapShotEditor.cs" />
-    <Compile Include="CheatEngine.cs" />
-    <Compile Include="Exceptions\AdministrativePrivilegeException.cs" />
-    <Compile Include="Exceptions\OpenProcessException.cs" />
-    <Compile Include="Exceptions\ProcessAttachException.cs" />
-    <Compile Include="Interfaces\ISnapShotable.cs" />
-    <Compile Include="MemoryViewer.cs" />
-    <Compile Include="CheatList.cs" />
-    <Compile Include="CheatTimer.cs" />
-    <Compile Include="Enums\CheatTimerIntervalType.cs" />
-    <Compile Include="Enums\CheatType.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Interfaces\IByteEditor.cs" />
-    <Compile Include="Editors\MockMemoryEditor.cs" />
-    <Compile Include="Cheat.cs" />
-    <Compile Include="CheatBlock.cs" />
-    <Compile Include="Editors\ProcessMemoryEditor.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CodeDesigner.Languages\CodeDesigner.Languages.csproj">
-      <Project>{dff996bd-b9ad-48fa-9445-195812528ef2}</Project>
-      <Name>CodeDesigner.Languages</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>

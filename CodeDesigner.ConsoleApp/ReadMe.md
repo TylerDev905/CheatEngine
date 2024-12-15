@@ -1,4 +1,4 @@
-﻿
+
 ## 1. Basic usage structure
 ```powershell
 CodeDesigner <Verb> [Options]

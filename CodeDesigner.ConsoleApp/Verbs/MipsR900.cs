@@ -3,6 +3,7 @@ using CommandLine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,7 +27,7 @@ namespace CodeDesigner.ConsoleApp.Verbs
 
             if (mipsR9500.Assemble)
             {
-               Console.WriteLine(_assembler.Assemble(mipsR9500.OperationHex));
+                Console.WriteLine(_assembler.Assemble(mipsR9500.OperationHex));
             }
 
             if (mipsR9500.Disassemble)
